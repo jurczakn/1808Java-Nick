@@ -4,7 +4,6 @@ public class Raptor extends Dinosaur{
 
 	public Raptor(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
 	}
 
 	public void roar(){

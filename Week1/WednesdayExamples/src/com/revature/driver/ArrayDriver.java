@@ -28,7 +28,9 @@ public class ArrayDriver {
 		addStrings("a", newArr);
 		
 		Arrays.sort(newArr);
-
+		
+		String f = "Have ", g = "a nice", h="day!!!";
+		System.out.println(f.concat(g.substring(1, 4).trim()).concat(h.substring(2).toUpperCase().concat(f.toLowerCase())).replace('h', 'l'));
 	}
 	
 	public static String addStrings(String a, String b){

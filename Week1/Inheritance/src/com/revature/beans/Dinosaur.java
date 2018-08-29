@@ -8,6 +8,18 @@ public abstract class Dinosaur implements Watchable {
 	
 	public String name;
 	
+	@Override
+	public void watch() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("Killing Dino named: " + this.name);
+		super.finalize();
+	}
+
 	public Dinosaur(String name){
 		this.name = name;
 	}
