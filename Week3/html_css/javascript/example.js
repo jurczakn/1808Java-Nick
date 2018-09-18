@@ -1,6 +1,15 @@
 /*
 **Let's do some JavaScript
 */
+//"use strict";
+
+//undefined = 6;
+
+//var ob = {x : 10, y : 11, x : 12};
+
+function myTest(x, y, y){
+    console.log(x + y);
+}
 
 var a = {   value: 10,
             secondValue: 20,
