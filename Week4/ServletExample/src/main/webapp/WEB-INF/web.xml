@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-  <display-name>ServletExample</display-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>ServletExample</display-name>
+	<context-param>
+		<param-name>pizzaType</param-name>
+		<param-value>deep dish</param-value>
+	</context-param>
 	<servlet>
 		<servlet-name>helloServlet</servlet-name>
 		<servlet-class>com.revature.servlets.MyServlet</servlet-class>
@@ -16,5 +23,44 @@
 	<servlet-mapping>
 		<servlet-name>printWriterServlet</servlet-name>
 		<url-pattern>/print</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>LifecycleServlet</display-name>
+		<servlet-name>LifecycleServlet</servlet-name>
+		<servlet-class>com.revature.servlets.LifecycleServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LifecycleServlet</servlet-name>
+		<url-pattern>/lifecycle</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>PizzaServlet</display-name>
+		<servlet-name>PizzaServlet</servlet-name>
+		<servlet-class>com.revature.servlets.PizzaServlet</servlet-class>
+		<init-param>
+			<param-name>toppings</param-name>
+			<param-value>cheese</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PizzaServlet</servlet-name>
+		<url-pattern>/PizzaServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>PeperoniPizzaServlet</display-name>
+		<servlet-name>PeperoniPizzaServlet</servlet-name>
+		<servlet-class>com.revature.servlets.PizzaServlet</servlet-class>
+		<init-param>
+			<param-name>toppings</param-name>
+			<param-value>peperoni</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PeperoniPizzaServlet</servlet-name>
+		<url-pattern>/PeperoniPizzaServlet</url-pattern>
 	</servlet-mapping>
 </web-app>
