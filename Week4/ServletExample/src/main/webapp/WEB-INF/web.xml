@@ -9,4 +9,12 @@
 		<servlet-name>helloServlet</servlet-name>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>printWriterServlet</servlet-name>
+		<servlet-class>com.revature.servlets.PrintWriterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>printWriterServlet</servlet-name>
+		<url-pattern>/print</url-pattern>
+	</servlet-mapping>
 </web-app>
