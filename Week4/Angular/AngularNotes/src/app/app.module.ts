@@ -27,6 +27,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { DatabindingComponent } from './components/databinding/databinding.component';
 import { PipesComponent } from './components/pipes/pipes.component';
 import { StructuralComponent } from './components/structural/structural.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { StructuralComponent } from './components/structural/structural.componen
     ServiceComponent,
     DatabindingComponent,
     PipesComponent,
-    StructuralComponent
+    StructuralComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
