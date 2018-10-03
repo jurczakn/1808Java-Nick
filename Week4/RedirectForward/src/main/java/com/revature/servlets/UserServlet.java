@@ -27,15 +27,35 @@ public class UserServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+    private void setAccessControlHeaders(HttpServletResponse resp){
+    	resp.setHeader("Access-Control-Allow-Origin", "*");
+    	//resp.setHeader("Access-Control-Allow-Methods", "GET,POST,DELETE,OPTIONS");
+    }
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		setAccessControlHeaders(response);
 		System.out.println(request.getPathInfo());
 		String username = request.getPathInfo().substring(1);
 		ObjectMapper om = new ObjectMapper();
-		String userString = om.writeValueAsString(userService.getUser(username));
-		response.getWriter().write(userString);
+		if ("".equals(username)){
+			response.getWriter().write(om.writeValueAsString(userService.getAllUsers()));
+		}
+		else {
+			String userString = om.writeValueAsString(userService.getUser(username));
+			response.getWriter().write(userString);
+		}
+	}
+
+	
+	
+	@Override
+	protected void doOptions(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		setAccessControlHeaders(resp);
+		//resp.getWriter().write("ok");
 	}
 
 	/**

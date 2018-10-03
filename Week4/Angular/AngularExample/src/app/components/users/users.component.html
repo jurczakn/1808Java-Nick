@@ -1,0 +1,6 @@
+<h4>User Component</h4>
+<br>
+<button (click)="getUsers()">Get Users</button>
+<div *ngFor="let user of users">
+  <p>{{user.username}}</p>
+</div>

@@ -9,6 +9,10 @@ public class UserService {
 	
 	private static List<User> userDao = new ArrayList<User>();
 	
+	public List<User> getAllUsers(){
+		return userDao;
+	}
+	
 	public User validateUser(User u){
 		User actualUser = getUser(u.getUsername());
 		if (actualUser == null){
