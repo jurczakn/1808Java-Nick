@@ -22,7 +22,7 @@ public class UserServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UserServlet) {
+    public UserServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
