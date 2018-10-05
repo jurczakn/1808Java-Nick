@@ -1,0 +1,13 @@
+
+<ehcache>
+	<cache name="myAwesomeCache" timeToIdleSeconds="120"/>
+	
+	<defaultCache
+		maxElementsInMemory="10000"
+		timeToIdleSeconds="30"
+		timeToLiveSeconds="120"
+		overflowToDisk="1000000"
+		diskPersistent="false"
+	/>
+	
+</ehcache>

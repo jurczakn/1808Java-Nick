@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.revature.entities.HoneyPot">
+		<id name="honeyPotId" column="HONEYPOT_ID">
+			<generator class="increment"></generator>
+		</id>
+		
+		<property name="amount" column="HONEYPOT_AMOUNT" type="double"/>
+		<property name="volume" column="VOLUME" type="double"/>
+		
+	</class>
+</hibernate-mapping>
