@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="house" class="com.revature.pojo.HouseImpl" scope="prototype" autowire="byType">
+		<!-- <property name="wall" ref="wall"/> -->
+	</bean>
+	<bean id="wall" class="com.revature.pojo.WallImpl" scope="prototype">
+		<property name="material" value="pickles"></property>
+	</bean>
+	<!-- <bean id="brokenWall" class="com.revature.pojo.BrokenWall" scope="singleton"/> -->
+
+</beans>
