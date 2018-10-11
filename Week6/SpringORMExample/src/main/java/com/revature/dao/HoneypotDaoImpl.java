@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.revature.domain.HoneyPot;
 
-@Service
+//@Service
 @Transactional(readOnly=true)
 public class HoneypotDaoImpl implements HoneypotDao {
 
