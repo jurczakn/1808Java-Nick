@@ -3,11 +3,22 @@ spring:
     name: zuul
 
 #Local Routes
+#zuul:
+#  routes:
+#    pet:
+#      url: http://localhost:9090
+#  strip-prefix: true 
+
+#Full Discovery Routes Through Eureka
 zuul:
   routes:
     pet:
-      url: http://localhost:9090
-  strip-prefix: true 
+      path: /pet/**
+
+eureka:
+  client:
+    service-url:
+      default-zone: ${EUREKA_HOME}
     
 server:
   port: 10000
